@@ -9,8 +9,8 @@ services:
     environment:
       - DB_USER=root
       - DB_PASSWORD=p@ssw0rd
-      - DB_NAME=craft
-      - DB_HOST=mysql
+      - DB_DATABASE=craft
+      - DB_SERVER=mysql
       
     # image: kevindoveton/craft
   mysql:
