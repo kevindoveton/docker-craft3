@@ -1,0 +1,19 @@
+version: '2'
+services:
+  craft:
+    build: ./web/
+    depends_on:
+      - mysql
+    ports:
+      - 3000:80
+    environment:
+      - DB_USER=root
+      - DB_PASSWORD=p@ssw0rd
+      - DB_NAME=craft
+      - DB_HOST=mysql
+      
+    # image: kevindoveton/craft
+  mysql:
+    build: ./mysql/
+    environment:
+      - MYSQL_ROOT_PASSWORD=p@ssw0rd
